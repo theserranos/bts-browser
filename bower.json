@@ -1,0 +1,21 @@
+{
+  "name": "bts-browser",
+  "description": "Bitshares on Browser",
+  "main": "index.js",
+  "authors": [
+    "TheSerranos"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "bitshares",
+    "browser"
+  ],
+  "homepage": "https://github.com/theserranos/bts-browser",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
