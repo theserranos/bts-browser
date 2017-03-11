@@ -1,4 +1,31 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<title>Bts on Browser</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+<body>
+<script src="lib/js/bts.js"></script>
+<script>
+	$(document).ready(function(){
+	var seed = "esto es un test guay";
+		var prvKey = bts.PrivateKey.fromSeed(bts.key.normalize_brainKey(seed));
+		console.log(prvKey.toWif());
+		console.log(prvKey.toPublicKey().toString());
+		//
+		console.log(bts);
+		var Apis = bts.bitshares_ws.Apis;
 
+		Apis.instance("wss://bitshares.openledger.info/ws", true).init_promise
+			.then((res)=>{
+				console.log('connected to: ', res[0].network);
+			})
+
+	});
+
+	
+</script>
+</body>
 </html>
